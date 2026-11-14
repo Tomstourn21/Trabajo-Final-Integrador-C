@@ -57,4 +57,5 @@ Ejecutar:
 -Registro del uso de Inteligencia Artificial:
 
 Consultas  sobre calculos y formulas fisicas.
+Alasis sobre posibles casos de errores.
 
