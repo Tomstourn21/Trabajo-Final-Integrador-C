@@ -20,11 +20,6 @@ void inicializarMision(MisionArtemis4 *mision) {
     mision->angulo_reingreso  = 6.20;
 }
 
-/*
- * Validacion cruzada: ademas del rango de cada dato, las magnitudes deben
- * ser coherentes entre si (la nave solo frena, y solo desciende).
- * Devuelve 1 si es coherente; si no, 0 y deja el motivo en *motivo.
- */
 int validarMision(const MisionArtemis4 *mision, const char **motivo) {
     if (mision->h_paracaidas >= mision->h_inicial) {
         *motivo = "La altitud de paracaidas debe ser menor que la altitud de reingreso.";
@@ -42,7 +37,7 @@ int validarMision(const MisionArtemis4 *mision, const char **motivo) {
     return 1;
 }
 
-/* Rellena 'tabla' con punteros a cada campo editable. Devuelve la cantidad. */
+
 int obtenerParametros(MisionArtemis4 *mision, ParametroEditable tabla[], int max) {
     const ParametroEditable base[N_PARAMETROS] = {
         { "Masa del modulo",              "kg",     &mision->masa,              100.0, 100000.0 },
@@ -237,10 +232,10 @@ void mostrarAmerizaje(const MisionArtemis4 *mision) {
 void mostrarAnguloReingreso(const MisionArtemis4 *mision) {
     EstadoAngulo estado = clasificarAngulo(mision->angulo_reingreso);
 
-    printf("\n==============================================================\n");
+    printf("\n  \n");
     printf("  ANALISIS DEL ANGULO DE REINGRESO (gamma = %.2f grados)\n",
            mision->angulo_reingreso);
-    printf("==============================================================\n");
+    printf("   \n");
     printf("  Ventana de seguridad: %.1f <= gamma <= %.1f grados\n",
            ANGULO_SEGURO_MIN, ANGULO_SEGURO_MAX);
 
