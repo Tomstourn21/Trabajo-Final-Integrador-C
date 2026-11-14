@@ -4,7 +4,7 @@
 
 #define G_TERRESTRE 9.80f
 
-void inicializarMision(MisionArtemis4 *mision) {
+void DatosMision(MisionArtemis4 *mision) {
     mision->masa = 10400.0f;
     mision->v_inicial = 11000.0f;
     mision->h_inicial = 120000.0f;
@@ -16,7 +16,7 @@ void inicializarMision(MisionArtemis4 *mision) {
     mision->angulo_reingreso = 6.20f;
 }
 
-void calcularTrabajoRozamiento(MisionArtemis4 mision) {
+void calculodeRozamiento(MisionArtemis4 mision) {
     float ki = 0.5f * mision.masa * powf(mision.v_inicial, 2.0f);
     float kf = 0.5f * mision.masa * powf(mision.v_paracaidas, 2.0f);
     float delta_k = kf - ki;
@@ -34,7 +34,7 @@ void calcularTrabajoRozamiento(MisionArtemis4 mision) {
     printf("   *(Valor negativo ya que la fuerza opone resistencia al avance)*\n");
 }
 
-void calcularDesaceleracionMedia(MisionArtemis4 mision) {
+void calculodeDesaceleracion(MisionArtemis4 mision) {
     float delta_v = mision.v_inicial - mision.v_paracaidas;
     float a_media = delta_v / mision.dt_desaceleracion;
     float g_multiplo = a_media / G_TERRESTRE;
@@ -46,7 +46,7 @@ void calcularDesaceleracionMedia(MisionArtemis4 mision) {
     printf(" - Equivalente en multiplos de gravedad= %.2f g\n", g_multiplo);
 }
 
-void calcularFuerzaAmerizaje(MisionArtemis4 mision) {
+void calculodeFuerzaAmerizaje(MisionArtemis4 mision) {
     float peso = mision.masa * G_TERRESTRE;
     float energia_cinetica_impacto = 0.5f * mision.masa * powf(mision.v_impacto, 2.0f);
     float fuerza_extra = energia_cinetica_impacto / mision.profundidad_agua;
@@ -60,7 +60,7 @@ void calcularFuerzaAmerizaje(MisionArtemis4 mision) {
     printf(" - Expresado como multiplo del peso= %.2f veces el peso\n", multiplo_peso);
 }
 
-void analizarAnguloReingreso(MisionArtemis4 mision) {
+void analizarAngulodeReingreso(MisionArtemis4 mision) {
     printf("\n=== ANALISIS DEL ANGULO DE REINGRESO (gamma = %.2f°) ===\n", mision.angulo_reingreso);
     printf("Ventana de seguridad normada: 5.5° <= gamma <= 7.0°\n");
     
