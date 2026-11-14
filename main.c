@@ -4,7 +4,7 @@
 
 int main() {
     MisionArtemis4 mision;
-    inicializarMision(&mision);
+    DatosMision(&mision);
     
     int opcion;
     do {
@@ -29,20 +29,20 @@ int main() {
                 printf(" - Velocidad en paracaidas: %.1f m/s\n - Angulo actual: %.2f°\n", mision.v_paracaidas, mision.angulo_reingreso);
                 break;
             case 2:
-                calcularTrabajoRozamiento(mision);
+                calculodeRozamiento(mision);
                 break;
             case 3:
-                calcularDesaceleracionMedia(mision);
+                calculodeDesaceleracion(mision);
                 break;
             case 4:
-                calcularFuerzaAmerizaje(mision);
+                calculodeFuerzaAmerizaje(mision);
                 break;
             case 5:
-                analizarAnguloReingreso(mision);
+                analizarAngulodeReingreso(mision);
                 break;
             case 6:
                 mision.angulo_reingreso = leerFlotante("Ingrese nuevo angulo de reingreso (ej. 4.5, 6.2, 8.0): ", 0.0f, 90.0f);
-                analizarAnguloReingreso(mision);
+                analizarAngulodeReingreso(mision);
                 break;
             case 7:
                 printf("\nSaliendo del simulador Artemis.\n");
