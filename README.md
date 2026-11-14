@@ -26,14 +26,23 @@ Analice qué sucedería si el ángulo de reingreso γ estuviera fuera de la vent
 -Funcionamiento:
 
 Tras compilar los archivos se genera un ejecutable .exe, el cual nuestra un menu con 9 opciones:
+
 " Ver parámetros actuales de la misión": Muestra los datos de la ultima modificación de parámetros.
+
 "Modificar parámetros de la misión": Modifica los parámetros de la misión, modifica el resultado de las siguientes funciones.
+
 "Restablecer valores por defecto": Si se modificaron los valores de la misión los reestablece a los que estaban por defecto, los que se dan en el enunciado.
+
 "Trabajo de la fuerza de rozamiento atmosférico": Ejecuta los cálculos físicos para hallar el rozamiento atmosférico.
+
 "Desaceleración media sobre la tripulación" : Determina la desaceleración media ejercida sobre la tripulación.
+
 "Fuerza promedio del agua en el amerizaje":  Calcula la fuerza promedio que el agua ejerce sobre la capsula durante el amerizaje.
+
 "Análisis del Angulo de reingreso": Informa si el ángulo ingresado en los parámetros esta dentro de la ventana de seguridad y evalúa las consecuencias  físicas de esto.
+
 "SIMULAR MISION COMPLETA ": Simula como seria el amerizaje en base a los parámetros ingresados y evalúa si la misión fue exitosa.
+
 " Salir": Cierra el programa. 
 
 -Instrucciones de compilación y ejecución:
