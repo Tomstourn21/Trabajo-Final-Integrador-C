@@ -20,3 +20,9 @@ Si la fase de mayor desaceleración dura Δt = 400,0 s, determine la desacelerac
 Suponiendo que durante el amerizaje la cápsula se hunde d = 1,50 m en el agua hasta detenerse momentáneamente antes de flotar, determine la fuerza promedio Fprom que el agua ejerce sobre la estructura. Exprese el resultado en Newtons (N) y como múltiplo del peso de la nave.
 
 Analice qué sucedería si el ángulo de reingreso γ estuviera fuera de la ventana de seguridad (5,5° ≤ γ ≤ 7,0°): evalúe las consecuencias físicas si γ > 7,0° (desaceleración excesiva) o si γ < 5,5° (rebote atmosférico)
+
+Funcionamiento:
+
+Instrucciones de compilación y ejecución:
+
+Registro del uso de Inteligencia Artificial:
