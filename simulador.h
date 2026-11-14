@@ -13,11 +13,10 @@ typedef struct {
     float angulo_reingreso; 
 } MisionArtemis4;
 
-void inicializarMision(MisionArtemis4 *mision);
-void calcularTrabajoRozamiento(MisionArtemis4 mision);
-void calcularDesaceleracionMedia(MisionArtemis4 mision);
-void calcularFuerzaAmerizaje(MisionArtemis4 mision);
-void analizarAnguloReingreso(MisionArtemis4 mision);
-void mostrarReporteCompleto(MisionArtemis4 mision);
+void DatosMision(MisionArtemis4 *mision);
+void calculodeRozamiento(MisionArtemis4 mision);
+void calculodeDesaceleracion(MisionArtemis4 mision);
+void calculodeFuerzaAmerizaje(MisionArtemis4 mision);
+void analizarAngulodeReingreso(MisionArtemis4 mision);
 
 #endif
